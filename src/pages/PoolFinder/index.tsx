@@ -1,4 +1,4 @@
-import { Currency, ETHER, JSBI, TokenAmount } from '@sushiswap/sdk'
+import { Currency, ETHER, JSBI, TokenAmount } from 'quest-switchswap-sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import { Plus } from 'react-feather'
 import { Text } from 'rebass'
@@ -84,7 +84,7 @@ export default function PoolFinder() {
     return (
         <>
             <Helmet>
-                <title>{i18n._(t`Find Pool`)} | Switch</title>
+                <title>{i18n._(t`Find Pool`)} | Sushi</title>
             </Helmet>
             <div className="relative w-full max-w-lg rounded bg-dark-900 shadow-liquidity-purple-glow">
                 <FindPoolTabs />

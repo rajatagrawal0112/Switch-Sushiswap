@@ -1,5 +1,5 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useHistory, useLocation, useParams } from 'react-router-dom'
 import { AppBar, Polling, Popups } from '../components'
 import Web3ReactManager from '../components/Web3ReactManager'
 import ReactGA from 'react-ga'
@@ -7,18 +7,41 @@ import Routes from '../routes'
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from '../state'
 import { updateUserDarkMode } from '../state/user/actions'
-import { parse } from 'qs'
+import { parse, stringify } from 'qs'
+import isEqual from 'lodash/isEqual'
+import useParsedQueryString from '../hooks/useParsedQueryString'
 
 function App(): JSX.Element {
     const bodyRef = useRef<any>(null)
 
-    const { pathname, search } = useLocation()
+    const { location, replace } = useHistory()
+
+    const { search, pathname } = useLocation()
 
     const dispatch = useDispatch<AppDispatch>()
 
     const [wrapperClassList, setWrapperClassList] = useState(
         'flex flex-col flex-1 items-center justify-start w-screen h-full overflow-y-auto overflow-x-hidden z-0 pt-4 sm:pt-8 px-4 md:pt-10 pb-20'
     )
+
+    const [preservedSource, setPreservedSource] = useState('')
+
+    useEffect(() => {
+        const parsed = parse(location.search, { parseArrays: false, ignoreQueryPrefix: true })
+
+        if (!isEqual(parsed['utm_source'], preservedSource)) {
+            setPreservedSource(parsed['utm_source'] as string)
+        }
+
+        if (preservedSource && !location.search.includes('utm_source')) {
+            replace({
+                ...location,
+                search: location.search
+                    ? location.search + '&utm_source=' + preservedSource
+                    : location.search + '?utm_source=' + preservedSource
+            })
+        }
+    }, [preservedSource, location, replace])
 
     useEffect(() => {
         if (pathname === '/trade') {
@@ -64,7 +87,7 @@ function App(): JSX.Element {
 
     return (
         <Suspense fallback={null}>
-            <div className="flex flex-col items-start overflow-x-hidden h-screen">
+            <div className="flex flex-col items-start h-screen overflow-x-hidden">
                 <AppBar />
                 <div ref={bodyRef} className={wrapperClassList}>
                     <Popups />

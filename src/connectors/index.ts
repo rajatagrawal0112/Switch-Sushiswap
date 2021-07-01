@@ -1,4 +1,4 @@
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId } from 'quest-switchswap-sdk'
 import { FortmaticConnector } from './Fortmatic'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import { LatticeConnector } from '@web3-react/lattice-connector'
@@ -74,7 +74,7 @@ export const injected = new InjectedConnector({
 // mainnet only
 export const walletconnect = new WalletConnectConnector({
     rpc: {
-        [ChainId.MAINNET]: RPC[ChainId.MAINNET],
+        [ChainId.MAINNET]: RPC[ChainId.MAINNET]
     },
     bridge: 'https://bridge.walletconnect.org',
     qrcode: true,

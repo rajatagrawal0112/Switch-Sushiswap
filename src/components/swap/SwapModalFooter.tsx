@@ -1,4 +1,4 @@
-import { Trade, TradeType } from '@sushiswap/sdk'
+import { Trade, TradeType } from 'quest-switchswap-sdk'
 import React, { useContext, useMemo, useState } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'
@@ -125,6 +125,29 @@ export default function SwapModalFooter({
                             : '-'}
                     </TYPE.black>
                 </RowBetween>
+                <RowBetween>
+                    <RowFixed>
+                        <TYPE.black color={theme.text2} fontSize={14} fontWeight={400}>
+                            {i18n._(t`You Save`)}
+                        </TYPE.black>
+                        <QuestionHelper
+                            text={i18n._(t`Your saving as compared to Sushiswap.`)}
+                        />
+                    </RowFixed>
+                    <FormattedPriceImpact priceImpact={priceImpactWithoutFee} />
+                </RowBetween>
+                <RowBetween>
+                    <RowFixed>
+                        <TYPE.black color={theme.text2} fontSize={14} fontWeight={400}>
+                            {i18n._(t`You Earn`)}
+                        </TYPE.black>
+                        <QuestionHelper
+                            text={i18n._(t`Your Earning on SwitchSwap.`)}
+                        />
+                    </RowFixed>
+                    <FormattedPriceImpact priceImpact={priceImpactWithoutFee} />
+                </RowBetween>
+                
             </AutoColumn>
 
             <AutoRow>

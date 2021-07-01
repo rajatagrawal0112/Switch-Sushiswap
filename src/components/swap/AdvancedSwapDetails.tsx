@@ -1,4 +1,4 @@
-import { Trade, TradeType, ChainId } from '@sushiswap/sdk'
+import { Trade, TradeType, ChainId } from 'quest-switchswap-sdk'
 import { useActiveWeb3React } from 'hooks/useActiveWeb3React'
 import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
@@ -76,6 +76,39 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
                             : '-'}
                     </div>
                 </RowBetween>
+                <RowBetween>
+                    <RowFixed>
+                        <div className="text-secondary text-sm">{i18n._(t`You Save`)}</div>
+                        <QuestionHelper
+                            text={i18n._(
+                                t`Your saving as compared to Sushiswap.`
+                            )}
+                        />
+                    </RowFixed>
+                    <div className="text-sm font-bold text-high-emphesis">
+                        {realizedLPFee
+                            ? `${parseFloat(realizedLPFee.toSignificant(4))*2/3} ${trade.inputAmount.currency.getSymbol(chainId)}`
+                            // ? `${parseFloat(trade.inputAmount.toSignificant(6))/100} $`
+                            : '-'}
+                    </div>
+                </RowBetween>
+                <RowBetween>
+                    <RowFixed>
+                        <div className="text-secondary text-sm">{i18n._(t`You Earn`)}</div>
+                        <QuestionHelper
+                            text={i18n._(
+                                t`Your Earning on SwitchSwap.`
+                            )}
+                        />
+                    </RowFixed>
+                    <div className="text-sm font-bold text-high-emphesis">
+                        {realizedLPFee
+                            ? `${parseFloat(realizedLPFee.toSignificant(4))*1/3} ${trade.inputAmount.currency.getSymbol(chainId)}`
+                            // ? `${parseFloat(trade.inputAmount.toSignificant(6))/100} $`
+                            : '-'}
+                    </div>
+                </RowBetween>
+            
             </AutoColumn>
         </>
     )

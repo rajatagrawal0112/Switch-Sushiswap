@@ -1,7 +1,7 @@
 import { ApprovalState, useApproveCallback } from '../../hooks/useApproveCallback'
 import { ArrowDown, Plus } from 'react-feather'
 import { ButtonConfirmed, ButtonError, ButtonLight, ButtonPrimary } from '../../components/ButtonLegacy'
-import { ChainId, Currency, ETHER, Percent, WETH, currencyEquals } from '@sushiswap/sdk'
+import { ChainId, Currency, ETHER, Percent, WETH, currencyEquals } from 'quest-switchswap-sdk'
 import React, { useCallback, useContext, useMemo, useState } from 'react'
 import Row, { AutoRow, RowBetween, RowFixed } from '../../components/Row'
 import { Trans, t } from '@lingui/macro'
@@ -504,7 +504,7 @@ export default function RemoveLiquidity({
     return (
         <>
             <Helmet>
-                <title>{i18n._(t`Remove Liquidity`)} | Switch</title>
+                <title>{i18n._(t`Remove Liquidity`)} | Sushi</title>
             </Helmet>
 
             <div className="w-full max-w-2xl mb-5 px-4">

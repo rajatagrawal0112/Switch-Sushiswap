@@ -24,21 +24,21 @@ const tips: readonly Tip[] = [
         title: 'Deposit into BentoBox',
         image: BentoSquare,
         description:
-            'Deposit your xSWTCH into BentoBox to passively earn yield through an xSWTCH investment strategy, or use as collateral within Kashi and future Bento dapps.',
+            'Deposit your xSUSHI into BentoBox to passively earn yield through an xSUSHI investment strategy, or use as collateral within Kashi and future Bento dapps.',
         href: '#'
     },
     {
         title: 'Make your voice heard',
         image: Vote,
         description:
-            'As an xSWTCH holder, your share of the staking pool correlates to the weight of your vote when participating in on-chain governance.',
+            'As an xSUSHI holder, your share of the staking pool correlates to the weight of your vote when participating in on-chain governance.',
         href: '#'
     },
     {
         title: 'Stack Yields with Aave',
         image: AaveSquare,
         description:
-            'Deposit your xSWTCH into Aave to receive aXSWTCH to earn collateral interest and borrowing power.',
+            'Deposit your xSUSHI into Aave to receive aXSUSHI to earn collateral interest and borrowing power.',
         href: '#'
     },
     {
@@ -50,13 +50,13 @@ const tips: readonly Tip[] = [
                 <Link to="#" className="underline">
                     cream.finance
                 </Link>{' '}
-                by depositing xSWTCH or by staking your SWTCH LP tokens from the{' '}
+                by depositing xSUSHI or by staking your SUSHI LP tokens from the{' '}
                 <Link to="#" className="underline">
-                    SWTCH/xSWTCH
+                    SUSHI/xSUSHI
                 </Link>{' '}
                 and/or{' '}
                 <Link to="#" className="underline">
-                    xSWTCH/ETH
+                    xSUSHI/ETH
                 </Link>{' '}
                 pools.
             </>
@@ -76,17 +76,17 @@ export default function SushiBarTips() {
     return (
         <>
             <Helmet>
-                <title>xSWTCH | Switch</title>
+                <title>xSUSHI | Sushi</title>
             </Helmet>
             <div className="w-full max-w-2xl mb-4">
                 <Button size="small" className="flex items-center pl-0 mb-4" onClick={goBack}>
                     <ChevronLeft strokeWidth={2} size={18} color={theme.white} />
                     <span className="ml-1">Go Back</span>
                 </Button>
-                <div className="text-high-emphesis text-h4">Make the most of your xSWTCH.</div>
+                <div className="text-high-emphesis text-h4">Make the most of your xSUSHI.</div>
                 <div className="text-gray-500 py-3">
-                    You can leave the bar and exchange your xSWTCH for SWTCH (as well as collect any earned interest) at
-                    any time. However, there are more ways to use xSWTCH to maximize your yield potential!
+                    You can leave the bar and exchange your xSUSHI for SUSHI (as well as collect any earned interest) at
+                    any time. However, there are more ways to use xSUSHI to maximize your yield potential!
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
                     {tips.map(({ title, image, description, href }, i) => (

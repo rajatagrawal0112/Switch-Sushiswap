@@ -1,5 +1,5 @@
 import React from 'react'
-// import { PancakeV1Pair, PancakeV2Pair } from '@sushiswap/sdk'
+// import { PancakeV1Pair, PancakeV2Pair } from 'quest-switchswap-sdk'
 
 export default function Test() {
     return <div></div>
@@ -81,7 +81,7 @@ export default function Test() {
     // return (
     //     <>
     //         <Helmet>
-    //             <title>Migrate | Ape</title>
+    //             <title>Migrate | Sushi</title>
     //         </Helmet>
     //         <div>
     //             <div>

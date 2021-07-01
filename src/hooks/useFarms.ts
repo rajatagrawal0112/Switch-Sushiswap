@@ -9,7 +9,7 @@ import concat from 'lodash/concat'
 import { getAverageBlockTime } from 'apollo/getAverageBlockTime'
 import orderBy from 'lodash/orderBy'
 import range from 'lodash/range'
-import sushiData from '@sushiswap/sushi-data'
+import sushiData from 'quest-switchswap-sushi-data'
 import { useActiveWeb3React } from 'hooks/useActiveWeb3React'
 import { useBoringHelperContract } from 'hooks/useContract'
 

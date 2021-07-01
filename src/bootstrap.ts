@@ -5,6 +5,7 @@ import { Zero } from '@ethersproject/constants'
 import { parseUnits } from '@ethersproject/units'
 import Fraction from './entities/Fraction'
 
+
 String.prototype.toBigNumber = function(decimals: BigNumberish): BigNumber {
     try {
         return parseUnits(this as string, decimals)

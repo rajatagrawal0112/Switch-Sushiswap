@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import sushiData from '@sushiswap/sushi-data'
+import sushiData from 'quest-switchswap-sushi-data'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 

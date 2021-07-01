@@ -1,4 +1,4 @@
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId } from 'quest-switchswap-sdk'
 import React from 'react'
 import { Redirect, Route, RouteComponentProps, useLocation, Switch } from 'react-router-dom'
 import { useActiveWeb3React } from 'hooks/useActiveWeb3React'
@@ -35,9 +35,10 @@ import {
 } from './pages/Swap/redirects'
 import Tools from './pages/Tools'
 import Vesting from './pages/Vesting'
-import MasterChefV1 from './pages/Yield/masterchefv1'
-import MasterChefV1Debug from './pages/Yield/masterchefv1/debug'
-import MiniChefV2 from './pages/Yield/minichefv2'
+import Yield from './pages/Yield'
+//import MasterChefV1 from './pages/Yield/masterchefv1'
+//import MasterChefV1Debug from './pages/Yield/masterchefv1/debug'
+//import MiniChefV2 from './pages/Yield/minichefv2'
 import Positions from './pages/Positions'
 import Transactions from './pages/Transactions'
 
@@ -66,32 +67,11 @@ function Routes(): JSX.Element {
             {chainId === ChainId.MAINNET && (
                 <Route exact strict path="/claim" component={OpenClaimAddressModalAndRedirectToSwap} />
             )}
-
-            {/* Yield */}
-            {/* Mainnet */}
-            {chainId === ChainId.MAINNET && <Route exact strict path="/yield" component={MasterChefV1} />}
-            {chainId === ChainId.MAINNET && (
+            {chainId === ChainId.MAINNET && <Route exact strict path="/yield" component={Yield} />}
+            {chainId === ChainId.MATIC && <Route exact strict path="/yield" component={Yield} />}
+            {/* {chainId === ChainId.MAINNET && (
                 <Route exact strict path="/yield/debug/:address" component={MasterChefV1Debug} />
-            )}
-            {chainId === ChainId.MATIC && <Route exact strict path="/yield" component={MiniChefV2} />}
-            {/* Kovan */}
-            {chainId === ChainId.KOVAN && <Route exact strict path="/yield" component={MasterChefV1} />}
-            {chainId === ChainId.KOVAN && (
-                <Route exact strict path="/yield/debug/:address" component={MasterChefV1Debug} />
-            )}
-            {chainId === ChainId.MATIC && <Route exact strict path="/yield" component={MiniChefV2} />}
-            {/* BSC */}
-            {chainId === ChainId.BSC && <Route exact strict path="/yield" component={MasterChefV1} />}
-            {chainId === ChainId.BSC && (
-                <Route exact strict path="/yield/debug/:address" component={MasterChefV1Debug} />
-            )}
-            {chainId === ChainId.MATIC && <Route exact strict path="/yield" component={MiniChefV2} />}
-            {/* Bsc Testnet */}
-            {chainId === ChainId.BSC_TESTNET && <Route exact strict path="/yield" component={MasterChefV1} />}
-            {chainId === ChainId.BSC_TESTNET && (
-                <Route exact strict path="/yield/debug/:address" component={MasterChefV1Debug} />
-            )}
-            {chainId === ChainId.MATIC && <Route exact strict path="/yield" component={MiniChefV2} />}
+            )} */}
             {chainId === ChainId.MAINNET && <Route exact strict path="/vesting" component={Vesting} />}
 
             {/* Migrate */}
@@ -100,36 +80,12 @@ function Routes(): JSX.Element {
             )}
 
             {/* SushiBar Staking */}
-            {/* Mainnet */}
             {chainId === ChainId.MAINNET && <Route exact strict path="/sushibar" component={SushiBar} />}
             {chainId === ChainId.MAINNET && (
                 <Route exact strict path="/sushibar/transactions" component={SushiBarTransactions} />
             )}
             {chainId === ChainId.MAINNET && <Route exact strict path="/sushibar/tips" component={SushiBarTips} />}
             {chainId === ChainId.MAINNET && <Route exact strict path="/stake" component={SushiBar} />}
-            {/* Kovan */}
-            {chainId === ChainId.KOVAN && <Route exact strict path="/sushibar" component={SushiBar} />}
-            {chainId === ChainId.KOVAN && (
-                <Route exact strict path="/sushibar/transactions" component={SushiBarTransactions} />
-            )}
-            {chainId === ChainId.KOVAN && <Route exact strict path="/sushibar/tips" component={SushiBarTips} />}
-            {chainId === ChainId.KOVAN && <Route exact strict path="/stake" component={SushiBar} />}
-            {/* BSC Mainnet */}
-            {chainId === ChainId.BSC && <Route exact strict path="/sushibar" component={SushiBar} />}
-            {chainId === ChainId.BSC && (
-                <Route exact strict path="/sushibar/transactions" component={SushiBarTransactions} />
-            )}
-            {chainId === ChainId.BSC && <Route exact strict path="/sushibar/tips" component={SushiBarTips} />}
-            {chainId === ChainId.BSC && <Route exact strict path="/stake" component={SushiBar} />}
-            {/* BSC Testnet */}
-            {chainId === ChainId.BSC_TESTNET && <Route exact strict path="/sushibar" component={SushiBar} />}
-            {chainId === ChainId.BSC_TESTNET && (
-                <Route exact strict path="/sushibar/transactions" component={SushiBarTransactions} />
-            )}
-            {chainId === ChainId.BSC_TESTNET && <Route exact strict path="/sushibar/tips" component={SushiBarTips} />}
-            {chainId === ChainId.BSC_TESTNET && <Route exact strict path="/stake" component={SushiBar} />}
-
-
             {/* Tools */}
             {chainId === ChainId.MAINNET && <Route exact strict path="/tools" component={Tools} />}
             {chainId === ChainId.MAINNET && <Route exact strict path="/saave" component={Saave} />}

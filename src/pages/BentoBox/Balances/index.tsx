@@ -33,7 +33,7 @@ export default function BentoBalances(): JSX.Element {
     return (
         <>
             <Helmet>
-                <title>BentoBox Balances | Switch</title>
+                <title>BentoBox Balances | Sushi</title>
             </Helmet>
             <Layout
                 left={

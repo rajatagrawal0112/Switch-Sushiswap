@@ -3,7 +3,7 @@ import { ThemeContext } from 'styled-components'
 import BalanceCard from './BalanceCard'
 import { Button } from '../../components'
 import { ChevronLeft } from 'react-feather'
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId } from 'quest-switchswap-sdk'
 import { SUSHI, XSUSHI } from '../../constants'
 import useTokenBalance from '../../hooks/useTokenBalance'
 import { useHistory } from 'react-router-dom'
@@ -16,7 +16,7 @@ const mock = {
 
 export default function SushiBarTransactions() {
     const theme = useContext(ThemeContext)
-    const addr = [,SUSHI[ChainId.BSC]?.address ?? '']
+
     const sushiBalance = useTokenBalance(SUSHI[ChainId.MAINNET]?.address ?? '')
     const xSushiBalance = useTokenBalance(XSUSHI?.address ?? '')
 

@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import sushiData from '@sushiswap/sushi-data'
+import sushiData from 'quest-switchswap-sushi-data'
 import { useActiveWeb3React } from 'hooks/useActiveWeb3React'
 import { useBoringHelperContract } from 'hooks/useContract'
 import orderBy from 'lodash/orderBy'
@@ -85,7 +85,7 @@ const useFarms = () => {
                 //console.log(KASHI_PAIRS.includes(Number(pool.id)), pool, Number(pool.id))
                 //console.log(pool.id, Number(pool.miniChef.totalAllocPoint) > 0)
                 return (
-                    !POOL_DENY.includes(pool?.id) &&
+                    //!POOL_DENY.includes(pool?.id) &&
                     pairs.find((pair: any) => pair?.id === pool?.pair) &&
                     Number(pool.miniChef.totalAllocPoint) > 0 &&
                     !['4'].includes(pool?.id) // manual filter for now

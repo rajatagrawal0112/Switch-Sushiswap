@@ -1,6 +1,6 @@
 import { ApprovalState, useApproveCallback } from '../../hooks/useApproveCallback'
 import { ButtonError, ButtonLight, ButtonPrimary } from '../../components/ButtonLegacy'
-import { Currency, ETHER, TokenAmount, WETH, currencyEquals } from '@sushiswap/sdk'
+import { Currency, ETHER, TokenAmount, WETH, currencyEquals } from 'quest-switchswap-sdk'
 import { Dots, Wrapper } from '../Pool/styleds'
 import React, { useCallback, useContext, useState } from 'react'
 import Row, { AutoRow, RowBetween, RowFlat } from '../../components/Row'
@@ -328,7 +328,7 @@ export default function AddLiquidity({
     return (
         <>
             <Helmet>
-                <title>{i18n._(t`Add Liquidity`)} | Switch</title>
+                <title>{i18n._(t`Add Liquidity`)} | Sushi</title>
             </Helmet>
             <div className="w-full max-w-2xl mb-5 px-4">
                 <NavLink

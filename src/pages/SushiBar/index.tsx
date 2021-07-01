@@ -6,7 +6,7 @@ import InfoCard from './InfoCard'
 import APRCard from './APRCard'
 import StakeCard from './StakeCard'
 import BalanceCard from './BalanceCard'
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId } from 'quest-switchswap-sdk'
 import { SUSHI, XSUSHI } from '../../constants'
 import useTokenBalance from '../../hooks/useTokenBalance'
 
@@ -24,7 +24,7 @@ export default function XSushi() {
     return (
         <>
             <Helmet>
-                <title>xSWTCH | Switch</title>
+                <title>xSUSHI | Sushi</title>
             </Helmet>
             <div className="flex flex-col w-full min-h-fitContent">
                 <div className="flex mb-6 justify-center">

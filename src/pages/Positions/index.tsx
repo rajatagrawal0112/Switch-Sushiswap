@@ -8,16 +8,16 @@ import { ExternalLink, User } from 'react-feather'
 import { Dots } from 'components'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useETHBalances } from 'state/wallet/hooks'
-import { Currency } from '@sushiswap/sdk'
+import { Currency } from 'quest-switchswap-sdk'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 
 const mock = {
     transactions: [
-        'Swap 0.1234 ETH for 32.1245 SWTCH',
-        'Swap 0.1235 ETH for 32.1245 SWTCH',
-        'Swap 0.1236 ETH for 32.1245 SWTCH',
-        'Swap 0.1237 ETH for 32.1245 SWTCH'
+        'Swap 0.1234 ETH for 32.1245 SUSHI',
+        'Swap 0.1235 ETH for 32.1245 SUSHI',
+        'Swap 0.1236 ETH for 32.1245 SUSHI',
+        'Swap 0.1237 ETH for 32.1245 SUSHI'
     ]
 }
 
@@ -30,7 +30,7 @@ export default function Positions() {
     return (
         <>
             <Helmet>
-                <title>{i18n._(t`Positions`)} | Switch</title>
+                <title>{i18n._(t`Positions`)} | Sushi</title>
             </Helmet>
 
             {/* <div className="w-full max-w-2xl">

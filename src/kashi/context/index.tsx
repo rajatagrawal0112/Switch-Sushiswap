@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { ChainId, Currency, WETH } from '@sushiswap/sdk'
-import { bentobox } from '@sushiswap/sushi-data'
+import { ChainId, Currency, WETH } from 'quest-switchswap-sdk'
+import { bentobox } from 'quest-switchswap-sushi-data'
 import { ethers } from 'ethers'
 import { useActiveWeb3React } from 'hooks/useActiveWeb3React'
 import { useAllTokens } from 'hooks/Tokens'
