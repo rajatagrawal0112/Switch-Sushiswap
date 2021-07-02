@@ -1,7 +1,7 @@
 import { ChainId, Currency } from 'quest-switchswap-sdk'
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import Logo from '../assets/images/logo.png'
+import Logo from '../assets/images/logo.svg'
 import { useActiveWeb3React } from '../hooks/useActiveWeb3React'
 import { useETHBalances } from '../state/wallet/hooks'
 import { ReactComponent as Burger } from '../assets/images/burger.svg'
@@ -46,7 +46,7 @@ function AppBar(): JSX.Element {
                             <div className="flex items-center justify-between h-16">
                                 <div className="flex items-center">
                                     <div className="flex-shrink-0">
-                                        <img src={Logo} alt="Sushi" className="h-10 w-auto" />
+                                        <img src={Logo} alt="Switch" className="h-10 w-auto" />
                                     </div>
                                     <div className="hidden sm:block sm:ml-4">
                                         <div className="flex space-x-2">
@@ -188,7 +188,7 @@ function AppBar(): JSX.Element {
                                             library.provider.isMetaMask && (
                                                 <>
                                                     <QuestionHelper
-                                                        text={i18n._(t`Add xSushi to your Metamask wallet`)}
+                                                        text={i18n._(t`Add xSWTCH to your Metamask wallet`)}
                                                     >
                                                         <div
                                                             className="hidden sm:inline-block rounded-md bg-dark-900 hover:bg-dark-800 cursor-pointer"
@@ -198,7 +198,7 @@ function AppBar(): JSX.Element {
                                                                     options: {
                                                                         address:
                                                                             '0x8798249c2e607446efb7ad49ec89dd1865ff4272',
-                                                                        symbol: 'XSUSHI',
+                                                                        symbol: 'XSWTCH',
                                                                         decimals: 18,
                                                                         image:
                                                                             'https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/ethereum/assets/0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272/logo.png'
@@ -218,7 +218,7 @@ function AppBar(): JSX.Element {
                                                                         .then(success => {
                                                                             if (success) {
                                                                                 console.log(
-                                                                                    'Successfully added XSUSHI to MetaMask'
+                                                                                    'Successfully added XSWTCH to MetaMask'
                                                                                 )
                                                                             } else {
                                                                                 throw new Error('Something went wrong.')
@@ -249,7 +249,7 @@ function AppBar(): JSX.Element {
                                             library &&
                                             library.provider.isMetaMask && (
                                                 <>
-                                                    <QuestionHelper text={i18n._(t`Add Sushi to your Metamask wallet`)}>
+                                                    <QuestionHelper text={i18n._(t`Add SWTCH to your Metamask wallet`)}>
                                                         <div
                                                             className="hidden sm:inline-block rounded-md bg-dark-900 hover:bg-dark-800 cursor-pointer"
                                                             onClick={() => {
@@ -272,7 +272,7 @@ function AppBar(): JSX.Element {
                                                                     type: 'ERC20',
                                                                     options: {
                                                                         address: address,
-                                                                        symbol: 'SUSHI',
+                                                                        symbol: 'SWTCH',
                                                                         decimals: 18,
                                                                         image:
                                                                             'https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/ethereum/assets/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2/logo.png'
@@ -292,7 +292,7 @@ function AppBar(): JSX.Element {
                                                                         .then(success => {
                                                                             if (success) {
                                                                                 console.log(
-                                                                                    'Successfully added SUSHI to MetaMask'
+                                                                                    'Successfully added SWTCH to MetaMask'
                                                                                 )
                                                                             } else {
                                                                                 throw new Error('Something went wrong.')

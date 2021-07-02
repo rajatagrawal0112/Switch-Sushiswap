@@ -30,12 +30,12 @@ export default function BalanceCard({
                         {i18n._(t`Balance`)}
                     </p>
                     <div className="flex items-center">
-                        <img className="w-10 md:w-16 -ml-1 mr-1 md:mr-2 -mb-1.5" src={XSushiImage} alt="sushi" />
+                        <img className="w-10 md:w-16 -ml-1 mr-1 md:mr-2 -mb-1.5" src={XSushiImage} alt="switch" />
                         <div className="flex flex-col justify-center">
                             <p className="text-caption2 md:text-lg font-bold text-high-emphesis">
                                 {formatFromBalance(xSushiBalance.value)}
                             </p>
-                            <p className="text-caption2 md:text-caption text-primary">xSUSHI</p>
+                            <p className="text-caption2 md:text-caption text-primary">xSWTCH</p>
                         </div>
                     </div>
                 </div>
@@ -48,13 +48,13 @@ export default function BalanceCard({
                         {/* <img className="cursor-pointer ml-2 w-4" src={MoreInfoSymbol} alt={'more info'} /> */}
                     </div>
                     <div className="flex items-center ml-8 md:ml-0">
-                        <img className="w-10 md:w-16 -ml-1 mr-1 md:mr-2 -mb-1.5" src={SushiImage} alt="sushi" />
+                        <img className="w-10 md:w-16 -ml-1 mr-1 md:mr-2 -mb-1.5" src={SushiImage} alt="switch" />
                         <div className="flex flex-col justify-center">
                             <p className="text-caption2 md:text-lg font-bold text-high-emphesis">
                                 {formatFromBalance(sushiBalance.value)}
                                 {/* {sushiEarnings.toPrecision(7)} */}
                             </p>
-                            <p className="text-caption2 md:text-caption text-primary">SUSHI</p>
+                            <p className="text-caption2 md:text-caption text-primary">SWTCH</p>
                         </div>
                     </div>
                 </div>

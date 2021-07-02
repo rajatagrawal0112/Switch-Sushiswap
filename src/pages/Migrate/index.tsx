@@ -311,8 +311,8 @@ const MigrateV2 = () => {
     return (
         <>
             <Helmet>
-                <title>Migrate LP tokens | Sushi</title>
-                <meta name="description" content="Migrate LP tokens to Sushi LP tokens" />
+                <title>Migrate LP tokens | Switch</title>
+                <meta name="description" content="Migrate LP tokens to Switch LP tokens" />
             </Helmet>
 
             <div className="text-2xl text-center mb-8">{i18n._(t`Migrate ${exchange} Liquidity`)}</div>

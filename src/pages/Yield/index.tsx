@@ -125,8 +125,8 @@ export default function Yield(): JSX.Element {
     return (
         <>
             <Helmet>
-                <title>{i18n._(t`Yield`)} | Sushi</title>
-                <meta name="description" content="Farm SUSHI by staking LP (Liquidity Provider) tokens" />
+                <title>{i18n._(t`Yield`)} | Switch</title>
+                <meta name="description" content="Farm SWTCH by staking LP (Liquidity Provider) tokens" />
             </Helmet>
             <div className="container grid grid-cols-4 gap-4 mx-auto">
                 <div className="sticky top-0 hidden lg:block md:col-span-1" style={{ maxHeight: '40rem' }}>
