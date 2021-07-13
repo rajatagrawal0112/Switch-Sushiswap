@@ -11,12 +11,12 @@ import { useLingui } from '@lingui/react'
 const items = (i18n: I18n) => [
     {
         name: i18n._(t`Docs`),
-        description: i18n._(t`Documentation for users of Sushi.`),
+        description: i18n._(t`Documentation for users of Switch.`),
         href: 'https://docs.sushi.com'
     },
     {
         name: i18n._(t`Dev`),
-        description: i18n._(t`Documentation for developers of Sushi.`),
+        description: i18n._(t`Documentation for developers of Switch.`),
         href: 'https://dev.sushi.com'
     },
     {
