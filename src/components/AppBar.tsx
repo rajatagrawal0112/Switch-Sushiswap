@@ -70,13 +70,13 @@ function AppBar(): JSX.Element {
                                                 <NavLink id={`yield-nav-link`} to={'/yield'}>
                                                     {i18n._(t`Yield`)}
                                                 </NavLink>
-                                            )}
+                                            )} */}
                                             {chainId === ChainId.MAINNET && (
                                                 <NavLink id={`sushibar-nav-link`} to={'/sushibar'}>
                                                     {i18n._(t`SushiBar`)}
                                                 </NavLink>
                                             )}
-                                            {chainId &&
+                                            {/* {chainId &&
                                                 [ChainId.MAINNET, ChainId.KOVAN, ChainId.BSC, ChainId.MATIC].includes(
                                                     chainId
                                                 ) && (
@@ -116,7 +116,7 @@ function AppBar(): JSX.Element {
                                                     >
                                                         {i18n._(t`Analytics`)}
                                                     </ExternalLink>
-                                                )} */}
+                                                )}  */}
                                         </div>
                                     </div>
                                 </div>
