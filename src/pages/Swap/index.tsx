@@ -306,7 +306,7 @@ export default function Swap() {
     return (
         <>
             <Helmet>
-                <title>{i18n._(t`Swap`)} | Switch</title>
+                <title>{i18n._(t`Swap`)} | RadioShack</title>
                 <meta
                     name="description"
                     content="Switch allows for swapping of ERC20 compatible tokens across multiple networks"
